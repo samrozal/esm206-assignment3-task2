@@ -97,7 +97,12 @@ Make sure to `View()` the resulting data frame (remember: run `View()` in the Co
 
 ```{r}
 # Your code here:
-
+sw_skin_sep <- starwars %>% 
+  separate(col = skin_color,
+           into = c("skin_1","skin_2"),
+           sep = ",",
+           extra = "merge",
+           remove = FALSE)
 
 ```
 
