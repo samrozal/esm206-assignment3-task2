@@ -138,7 +138,11 @@ In the code chunk below, starting from the `mpg` data create a new data frame ca
 
 ```{r}
 # Your code here: 
-
+mpg_model_class <- mpg %>% 
+  unite(col = model_class,
+        c(model,class),
+        sep= "-",
+        remove= FALSE)
 
 ```
 
@@ -168,7 +172,7 @@ In the code chunk below, use `ymd()` to convert a date that you choose in `YYYY-
 
 ```{r}
 # Your code here: 
-
+ymd("2001/10/26") #my younger brother's birthday :)
 
 ```
 
