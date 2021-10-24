@@ -247,7 +247,16 @@ Starting from the `lakers` dataset, create a new dataset called `gasol_hookshots
 
 ```{r}
 # Your code here: 
+gasol_hookshots <- lakers %>% 
+  filter(player == "Pau Gasol", type == "hook") %>% 
+  mutate(date_new = ymd(date)) %>% 
+  mutate(month_new = month(date_new))
 
+gasol_hookshots_by_month <- gasol_hookshots %>% 
+  group_by(month_new) %>% 
+  summarize(total_hookshots = n())
+
+gasol_hookshots_by_month
 
 ```
 
