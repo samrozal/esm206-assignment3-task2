@@ -199,6 +199,11 @@ In the code chunk below, create a vector (using `c()`, as above) stored as `some
 ```{r}
 # Your code here: 
 
+some_dates <- c(11061972, 02142007,01301843)
+some_dates_converted <- mdy(some_dates)
+some_dates_converted
+
+class(some_dates_converted)
 
 ```
 
