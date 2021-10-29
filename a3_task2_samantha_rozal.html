@@ -213,8 +213,7 @@ sw_sep_hair &lt;- starwars %&gt;% # Start with starwars
 sw_sep_name &lt;- starwars %&gt;% 
   separate(col = name,
            into = c(&quot;name_1&quot;,&quot;name_2&quot;),
-           sep = &quot;-&quot;
-  )</code></pre>
+           sep = &quot;-&quot;)</code></pre>
 </div>
 <div id="b.-follow-me" class="section level4">
 <h4>1B. Follow me</h4>
@@ -298,7 +297,11 @@ ymd(20201118)</code></pre>
 <h4>3A. On your own</h4>
 <p>In the code chunk below, use <code>ymd()</code> to convert a date that you choose in <code>YYYY-MM-DD</code>, <code>YYYY/MM/DD</code> and <code>YYYYMMDD</code> form to a Date class:</p>
 <pre class="r"><code># Your code here: 
-ymd(&quot;2001/10/26&quot;) #my younger brother&#39;s birthday :)</code></pre>
+ymd(&quot;2001-10-26&quot;) #my younger brother&#39;s birthday :)</code></pre>
+<pre><code>## [1] &quot;2001-10-26&quot;</code></pre>
+<pre class="r"><code>ymd(&quot;2001/10/26&quot;) </code></pre>
+<pre><code>## [1] &quot;2001-10-26&quot;</code></pre>
+<pre class="r"><code>ymd(&quot;20011026&quot;)</code></pre>
 <pre><code>## [1] &quot;2001-10-26&quot;</code></pre>
 </div>
 <div id="b.-follow-me-1" class="section level4">
@@ -431,7 +434,7 @@ storm_season &lt;- storms %&gt;% # Start from storms data
 <p>Note: If you add another condition within <code>case_when()</code> that is <code>TRUE ~ &quot;some thing&quot;</code>, then any entry that hasn’t been specified by previous conditions will get that “catch all” statement.</p>
 <pre class="r"><code># Your code here: 
 storms_danger &lt;- storms %&gt;%
-  mutate(danger = case_when(status == &quot;hurricane&quot; ~ &quot;danger&quot;,
+  mutate(danger = case_when(status == &quot;hurricane&quot; ~ &quot;high&quot;,
                             TRUE ~ &quot;moderate&quot;))</code></pre>
 </div>
 </div>
@@ -449,6 +452,9 @@ storms_danger &lt;- storms %&gt;%
 </div>
 <div id="end-task-2" class="section level2">
 <h2>END TASK 2!</h2>
+</div>
+<div id="moved-file" class="section level1">
+<h1>moved file</h1>
 </div>
 
 

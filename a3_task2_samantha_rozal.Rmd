@@ -62,8 +62,7 @@ Make sure to `View()` the resulting data frame (remember: run `View()` in the Co
 sw_sep_name <- starwars %>% 
   separate(col = name,
            into = c("name_1","name_2"),
-           sep = "-"
-  )
+           sep = "-")
 
 ```
 
@@ -172,7 +171,9 @@ In the code chunk below, use `ymd()` to convert a date that you choose in `YYYY-
 
 ```{r}
 # Your code here: 
-ymd("2001/10/26") #my younger brother's birthday :)
+ymd("2001-10-26") #my younger brother's birthday :)
+ymd("2001/10/26") 
+ymd("20011026")
 
 ```
 
@@ -307,7 +308,7 @@ Note: If you add another condition within `case_when()` that is `TRUE ~ "some th
 ```{r}
 # Your code here: 
 storms_danger <- storms %>%
-  mutate(danger = case_when(status == "hurricane" ~ "danger",
+  mutate(danger = case_when(status == "hurricane" ~ "high",
                             TRUE ~ "moderate"))
   
 ```
